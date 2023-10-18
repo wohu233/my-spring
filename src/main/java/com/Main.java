@@ -15,7 +15,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 	public static void main(String[] args) {
 		BeanFactory beanFactory = new AnnotationConfigApplicationContext(AppConfig.class);
-		UserService userService = beanFactory.getBean(UserService.class);
-		userService.save();
+		UserService userService1 = beanFactory.getBean(UserService.class);
+		UserService userService2 = beanFactory.getBean(UserService.class);
+		//单例：放到缓存中 每次获取都是同一个 所以true
+		//多例：没有放到缓存中 每次获取都是不同的对象 false
+		userService1.save();
+		System.out.println(userService1==userService2);
 	}
 }

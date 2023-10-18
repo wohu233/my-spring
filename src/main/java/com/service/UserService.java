@@ -1,5 +1,6 @@
 package com.service;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,12 +8,15 @@ import org.springframework.stereotype.Service;
  * @author Smiling-HuYang
  * @version 1.0
  */
+
+//@Scope(value = "prototype")
 @Service
 public class UserService {
 
     public UserService() {
         //创建对象会调用构造方法
-//        throw new RuntimeException("人为地制造一个异常.....");
+        //throw new RuntimeException("a bug.....");
+        System.out.println("test...");
     }
 
     public void save(){
