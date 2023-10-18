@@ -5,9 +5,11 @@ import com.service.UserService;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+
 /**
  *
- * @Author Smiling-HuYang
+ * @author Smiling-HuYang
+ * @date   2023-10-18, 周三, 12:23
  */
 
 public class Main {
